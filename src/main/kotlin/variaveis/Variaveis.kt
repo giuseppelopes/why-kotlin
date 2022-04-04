@@ -26,9 +26,9 @@ class Variaveis {
         var nome_mutavel = "Gariba mutavel"
         var nome_mutavel_tipada: String = "Gariba mutavel Tipada"
 
-        println(nome_mutavel)
+        println( nome_mutavel )
         nome_mutavel = "Alteramos a variavel nome_mutavel!!!"
-        println(nome_mutavel)
+        println( nome_mutavel )
     }
 
     fun tipagem() {
@@ -66,13 +66,39 @@ class Variaveis {
 
     fun arrays() {
 
-        var numeros = intArrayOf( 1, 2, 3)
+        var numeros = intArrayOf( 1, 2, 3 )
 
-        var numerosTipando = arrayOf<Int>(1, 2, 3)
+        var numerosTipando = arrayOf<Int>( 1, 2, 3 )
 
-        var array = arrayOf( 1, "2", 3.0F)
+        var array = arrayOf( 1, "2", 3.0F )
+    }
+
+    //Listas
+    fun listas(){
+
+        var lista = listOf<Int>( 1, 2, 3 )
+
+        var listaMutavel: MutableList<Int> = mutableListOf( 1, 2, 3 )
+
+        var recebeListaMutavel: List<Int> = listaMutavel
 
     }
+
+    var listaMutavel: MutableList<Int> = mutableListOf( 1, 2, 3 )
+    fun addListaMutavel( elementoLista: Int ){
+        listaMutavel.add( elementoLista )
+    }
+
+    fun percorrendoLista() {
+        listaMutavel.forEach {
+            i -> println("percorrendo a lista $i")
+        }
+    }
+
+    fun removerElementoLista() {
+        listaMutavel.removeIf { i -> i == 2 }
+    }
+
 
 
 }
